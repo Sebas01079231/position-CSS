@@ -1,0 +1,73 @@
+/* z-index: 
+
+Es la propiedad que nos permite ordenar Los elementos superpuestos para controlar cual se coloca por delante y cual por detrás.
+
+Reglas a considerar:
+
+1: el html tiene un orden de apilamiento por defecto dependiendo del orden del codigo(que elemento se escribio por delante), "z-index: auto;" es lo mismo que no poner nada. 
+
+2: NUNCA se podra colocar un contenedor por delante de su contenido, pero se puede poner el contenido por debajo del contenedor con numeros negativos
+
+
+ 
+EL stacking context o el contexto de apilamiento es el espacio donde nuestros elementos se van a ir apilando para que unos queden por detrás y otros por delante.
+
+El orden del stacking context es(de delante a atrás): 
+
+Elementos posicionados con un z-index de 1 ó más
+Elementos posicionados sin z-index declarado (o
+z-index:auto)
+Elementos no posicionados
+Elementos con z-index negativo
+*
+
+*/
+
+body{
+    background-color: #333;
+}
+
+.container{
+    background-color: darkgoldenrod;
+    position: relative;
+
+    height: 300px;
+    width: 300px;
+
+}
+
+.box{
+    width: 200px;
+    height: 200px;
+}
+
+.box-1{
+    background-color: lightcoral;
+    position: relative;
+
+    left: 270px;
+    z-index: -1;
+}
+.box-1-2{
+    background-color: red;
+    position: relative;
+
+    left: 270px;
+    bottom: 100px;
+    z-index: -2;
+}
+
+
+
+
+.box-2{
+    background-color: lightgreen;
+    position: relative;
+    top: 100px;
+    z-index: 1;
+}
+.box-3{
+    background-color: lightskyblue;
+    position: relative;
+    /* z-index: 2; */
+}
