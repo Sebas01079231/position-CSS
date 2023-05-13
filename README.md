@@ -1,6 +1,7 @@
 # position-CSS
 Guia de Position CSS
-La propiedad position nos permite posicionar los elementos. Hay algunos conceptos que debéis conocer para entender position.
+
+La propiedad position nos permite posicionar los elementos. Hay algunos conceptos que para entender position.
 
     Flujo de renderizado -> Por norma general Los elementos se dibujan de izquierda a derecha y de arriba abajo. El punto 0,0 de los elementos, por norma general, es la esquina superior izquierda.
 
